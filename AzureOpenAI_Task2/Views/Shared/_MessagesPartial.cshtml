@@ -1,0 +1,8 @@
+﻿@model List<MessageViewModel>
+
+@foreach (var message in Model)
+{
+    <div class="message @(message.Role == "user" ? "user-message" : "model-message")">
+        <strong>@message.Role:</strong> @message.Content
+    </div>
+}

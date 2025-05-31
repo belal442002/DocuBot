@@ -1,0 +1,124 @@
+﻿@model List<Chat>
+
+@{
+    ViewData["Title"] = "Chat History";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h5 mb-0">Chat History</h2>
+                </div>
+                <div class="card-body">
+                    @if (Model != null && Model.Any())
+                    {
+                        <div class="row">
+                            @foreach (var chat in Model)
+                            {
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title text-truncate mb-3">Document: </h5>
+
+                                            <!-- Enhanced Document Preview Section -->
+                                            <div class="document-preview-container mb-3 flex-grow-1">
+                                                @if (!string.IsNullOrEmpty(chat.DocumentPath))
+                                                {
+                                                    if (chat.DocumentPath.EndsWith(".pdf"))
+                                                    {
+                                                        <div class="ratio ratio-1x1 mb-3">
+                                                            <iframe src="@chat.DocumentPath" class="border rounded" style="background-color: #f8f9fa;" allowfullscreen></iframe>
+                                                        </div>
+                                                    }
+                                                    else if (chat.DocumentPath.EndsWith(".jpg") || chat.DocumentPath.EndsWith(".png") || chat.DocumentPath.EndsWith(".jpeg"))
+                                                    {
+                                                        <div class="text-center mb-3">
+                                                            <img src="@chat.DocumentPath" class="img-fluid rounded border" alt="Document preview" style="max-height: 300px; width: auto;">
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="alert alert-warning mb-0">
+                                                            <i class="fas fa-exclamation-triangle me-2"></i> Unsupported document type
+                                                        </div>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <div class="alert alert-info mb-0">
+                                                        <i class="fas fa-info-circle me-2"></i> No document available
+                                                    </div>
+                                                }
+                                            </div>
+
+                                            <!-- Action Buttons -->
+                                            <div class="d-grid gap-2 mt-auto">
+                                                <div class="btn-group" role="group">
+                                                    <a href="@Url.Action("GetOldSession", "Document", new { sessionId = chat.SessionId })"
+                                                       class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-comments me-2"></i> View Chat
+                                                    </a>
+                                                    <a href="@Url.Action("DeleteSession", "Document", new { sessionId = chat.SessionId })"
+                                                       class="btn btn-danger btn-sm"
+                                                       onclick="return confirm('Are you sure you want to delete this session?');">
+                                                        <i class="fas fa-trash-alt me-2"></i> Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i> No chat sessions found
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .document-preview-container {
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+    .card-title {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .ratio-1x1 {
+        aspect-ratio: 1/1;
+    }
+
+    .btn-group {
+        width: 100%;
+    }
+
+        .btn-group .btn {
+            flex: 1;
+        }
+</style>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />

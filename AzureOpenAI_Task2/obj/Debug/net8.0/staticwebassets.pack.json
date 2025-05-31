@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\AI-Internship-Tasks\\AzureOpenAI_Task\\AzureOpenAI_Task2\\wwwroot\\css\\HomeStyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\HomeStyleSheet.css"
+    },
+    {
+      "Id": "E:\\AI-Internship-Tasks\\AzureOpenAI_Task\\AzureOpenAI_Task2\\wwwroot\\files\\7a4c1d9e-5afd-410c-a250-ff37ff8d25dd_BelalMohamed_Backend .Net Developer.pdf",
+      "PackagePath": "staticwebassets\\files\\7a4c1d9e-5afd-410c-a250-ff37ff8d25dd_BelalMohamed_Backend .Net Developer.pdf"
+    },
+    {
+      "Id": "E:\\AI-Internship-Tasks\\AzureOpenAI_Task\\AzureOpenAI_Task2\\wwwroot\\files\\9906b8b4-8292-4f1c-bd96-3cf72dcdb2ca_BelalMohamed_Backend .Net Developer.pdf",
+      "PackagePath": "staticwebassets\\files\\9906b8b4-8292-4f1c-bd96-3cf72dcdb2ca_BelalMohamed_Backend .Net Developer.pdf"
+    },
+    {
+      "Id": "E:\\AI-Internship-Tasks\\AzureOpenAI_Task\\AzureOpenAI_Task2\\wwwroot\\files\\9d020a5c-c6f9-491f-99c2-065f3d8760e1_BelalMohamed_Backend .Net Developer.pdf",
+      "PackagePath": "staticwebassets\\files\\9d020a5c-c6f9-491f-99c2-065f3d8760e1_BelalMohamed_Backend .Net Developer.pdf"
+    },
+    {
+      "Id": "E:\\AI-Internship-Tasks\\AzureOpenAI_Task\\AzureOpenAI_Task2\\wwwroot\\files\\ec8647e2-3b3c-4121-ab2f-b118ca9c8568_BelalMohamed_Backend .Net Developer.pdf",
+      "PackagePath": "staticwebassets\\files\\ec8647e2-3b3c-4121-ab2f-b118ca9c8568_BelalMohamed_Backend .Net Developer.pdf"
+    },
+    {
+      "Id": "E:\\AI-Internship-Tasks\\AzureOpenAI_Task\\AzureOpenAI_Task2\\wwwroot\\tessdata\\eng.traineddata",
+      "PackagePath": "staticwebassets\\tessdata\\eng.traineddata"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AzureOpenAI_Task2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AzureOpenAI_Task2.props",
+      "PackagePath": "build\\AzureOpenAI_Task2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AzureOpenAI_Task2.props",
+      "PackagePath": "buildMultiTargeting\\AzureOpenAI_Task2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AzureOpenAI_Task2.props",
+      "PackagePath": "buildTransitive\\AzureOpenAI_Task2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

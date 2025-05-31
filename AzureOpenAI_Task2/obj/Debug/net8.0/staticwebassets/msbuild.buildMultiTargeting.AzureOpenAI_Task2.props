@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AzureOpenAI_Task2.props" />
+</Project>

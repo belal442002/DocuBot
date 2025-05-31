@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Upload Document";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4">Upload Document</h2>
+
+            <!-- Document Upload Section -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Upload Document</h5>
+                    <form id="uploadForm" action="upload-document" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <input type="file" id="documentFile" name="documentFile" class="form-control" onchange="previewDocument(event)" required />
+                            <small id="file-name" class="form-text text-muted">No file selected</small>
+                        </div>
+                        <div id="document-preview" class="document-preview">
+                            <!-- Document preview will be displayed here -->
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Start Chat</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS for Document Preview -->
+<style>
+    .document-preview {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        min-height: 100px;
+    }
+
+    iframe, img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<!-- JavaScript for Document Preview -->
+<script>
+    // Preview the selected document
+    function previewDocument(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('document-preview');
+        const fileName = document.getElementById('file-name');
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                if (file.type === 'application/pdf') {
+                    preview.innerHTML = `<iframe src="${e.target.result}" style="width: 100%; height: 400px;"></iframe>`;
+                } else if (file.type.startsWith('image/')) {
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Document Preview" style="max-width: 100%;" />`;
+                } else {
+                    preview.innerHTML = `<p>Unsupported file type.</p>`;
+                }
+            };
+            reader.readAsDataURL(file);
+            fileName.textContent = file.name;
+        } else {
+            preview.innerHTML = `<p>No document selected.</p>`;
+            fileName.textContent = 'No file selected';
+        }
+    }
+</script>

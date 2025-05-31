@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Welcome to DocuBot</h1>
+    <p class="lead">Manage your sessions efficiently and effectively.</p>
+
+    <div class="mt-5">
+        <a href="@Url.Action("CreateNewSession", "Home")" class="btn btn-primary btn-lg mx-3">
+            <i class="fas fa-plus-circle"></i> Create New Session
+        </a>
+        <a href="@Url.Action("OldSessions", "Home")" class="btn btn-outline-secondary btn-lg mx-3">
+            <i class="fas fa-history"></i> View Old Sessions
+        </a>
+    </div>
+</div>
+
+<!-- Font Awesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />

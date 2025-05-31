@@ -1,0 +1,154 @@
+﻿@model Chat
+
+@{
+    ViewBag.Title = "Chat with the Model";
+}
+
+<div class="container-fluid mt-5">
+    <!-- Changed to container-fluid for full width -->
+    <div class="row">
+        <div class="col-12">
+            <!-- Full width column -->
+            <h2 class="text-center mb-4">Chat with the Model</h2>
+
+            <!-- Document Preview Section -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Document Preview</h5>
+                    <div id="document-preview" class="document-preview">
+                        @if (!string.IsNullOrEmpty(Model?.DocumentPath))
+                        {
+                            if (Model.DocumentPath.EndsWith(".pdf"))
+                            {
+                                <iframe src="@Model.DocumentPath" style="width: 100%; height: 400px;"></iframe>
+                            }
+                            else if (Model.DocumentPath.EndsWith(".jpg") || Model.DocumentPath.EndsWith(".png"))
+                            {
+                                <img src="@Model.DocumentPath" alt="Document Preview" style="max-width: 100%;" />
+                            }
+                            else
+                            {
+                                <p>Unsupported document type.</p>
+                            }
+                        }
+                        else
+                        {
+                            <p>No document available.</p>
+                        }
+                    </div>
+                </div>
+            </div>
+
+           @*  <!-- Document Content Section -->
+            @if (!string.IsNullOrWhiteSpace(Model?.DocumentContent))
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Document Content</h5>
+                        <div class="document-content">
+                            <p>@Model.DocumentContent</p> <!-- Display document content as a paragraph -->
+                        </div>
+                    </div>
+                </div>
+            } *@
+
+            <!-- Chat Section -->
+            <div class="card" style="width: 120%;">
+                <div class="card-body">
+                    <h5 class="card-title">Chat</h5>
+
+                    <!-- Display Messages -->
+                    @{
+                        var messagesCount = Model!.Messages.Count;
+                        var count = 1;
+                    }
+                    @if (messagesCount != 0)
+                    {
+                        <div id="chatMessages" class="mb-3">
+                            @foreach (var message in Model.Messages)
+                            {
+                                if(count == 1 || count == 2)
+                                {
+                                    count++;
+                                    continue;
+                                }
+                                <div class="message @(message.Role == "user" ? "user-message" : "model-message")">
+                                   @*  <strong>@message.Role:</strong> *@ @message.Content
+                                </div>
+                                count++;
+                            }
+                        </div>
+                    }
+
+                    <!-- Chat Input -->
+                    <form id="chatForm" method="post" action="SendMessage">
+                        <input type="hidden" asp-for="@Model.DocumentPath" />
+                        <input type="hidden" asp-for="@Model.SessionId" />
+                        <input type="hidden" asp-for="@Model.DocumentContent" />
+
+                        @if (messagesCount != 0)
+                        {
+                            var messagesList = Model.Messages.ToList();
+                            @for (int i =0; i < messagesList.Count; i++)
+                            {
+                                <input type="hidden" name="Messages[@i].Id" value="@messagesList[i].Id" />
+                                <input type="hidden" name="Messages[@i].SessionId" value="@messagesList[i].SessionId" />
+                                <input type="hidden" name="Messages[@i].Role" value="@messagesList[i].Role" />
+                                <input type="hidden" name="Messages[@i].Content" value="@messagesList[i].Content" />
+                                <input type="hidden" name="Messages[@i].TimeStamp" value="@messagesList[i].TimeStamp" />
+                            }
+                        }
+                        <div class="input-group">
+                            <input type="text" id="chatInput" name="text" class="form-control" placeholder="Type your message..." required />
+                            <button type="submit" class="btn btn-success">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS for Chat Messages and Document Content -->
+<style>
+    .message {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        max-width: 70%;
+    }
+
+    .user-message {
+        background-color: #e3f2fd;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .model-message {
+        background-color: #f5f5f5;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .document-preview {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        min-height: 100px;
+    }
+
+    .document-content {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-top: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+        .document-content p {
+            margin: 0; /* Remove default paragraph margin */
+            white-space: pre-wrap; /* Preserve line breaks and spacing */
+        }
+</style>

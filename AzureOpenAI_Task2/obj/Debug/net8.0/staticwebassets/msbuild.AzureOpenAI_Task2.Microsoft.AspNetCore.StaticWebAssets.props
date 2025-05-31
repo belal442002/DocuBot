@@ -1,0 +1,100 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\HomeStyleSheet.css))">
+      <SourceType>Package</SourceType>
+      <SourceId>AzureOpenAI_Task2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AzureOpenAI_Task2</BasePath>
+      <RelativePath>css/HomeStyleSheet.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\HomeStyleSheet.css))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\7a4c1d9e-5afd-410c-a250-ff37ff8d25dd_BelalMohamed_Backend .Net Developer.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>AzureOpenAI_Task2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AzureOpenAI_Task2</BasePath>
+      <RelativePath>files/7a4c1d9e-5afd-410c-a250-ff37ff8d25dd_BelalMohamed_Backend .Net Developer.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\7a4c1d9e-5afd-410c-a250-ff37ff8d25dd_BelalMohamed_Backend .Net Developer.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\9906b8b4-8292-4f1c-bd96-3cf72dcdb2ca_BelalMohamed_Backend .Net Developer.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>AzureOpenAI_Task2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AzureOpenAI_Task2</BasePath>
+      <RelativePath>files/9906b8b4-8292-4f1c-bd96-3cf72dcdb2ca_BelalMohamed_Backend .Net Developer.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\9906b8b4-8292-4f1c-bd96-3cf72dcdb2ca_BelalMohamed_Backend .Net Developer.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\9d020a5c-c6f9-491f-99c2-065f3d8760e1_BelalMohamed_Backend .Net Developer.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>AzureOpenAI_Task2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AzureOpenAI_Task2</BasePath>
+      <RelativePath>files/9d020a5c-c6f9-491f-99c2-065f3d8760e1_BelalMohamed_Backend .Net Developer.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\9d020a5c-c6f9-491f-99c2-065f3d8760e1_BelalMohamed_Backend .Net Developer.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\ec8647e2-3b3c-4121-ab2f-b118ca9c8568_BelalMohamed_Backend .Net Developer.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>AzureOpenAI_Task2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AzureOpenAI_Task2</BasePath>
+      <RelativePath>files/ec8647e2-3b3c-4121-ab2f-b118ca9c8568_BelalMohamed_Backend .Net Developer.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\ec8647e2-3b3c-4121-ab2f-b118ca9c8568_BelalMohamed_Backend .Net Developer.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\tessdata\eng.traineddata))">
+      <SourceType>Package</SourceType>
+      <SourceId>AzureOpenAI_Task2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AzureOpenAI_Task2</BasePath>
+      <RelativePath>tessdata/eng.traineddata</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\tessdata\eng.traineddata))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
