@@ -64,14 +64,14 @@ Before you begin, make sure you have the following installed:
 
 - [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - An Azure OpenAI resource (with access to GPT-4o)
-- API credentials: Add your Azure OpenAI `endpoint`, `API key`, and `deployment ID` to the `appsettings.json` file like so:
+- API credentials: Add your Azure OpenAI `endpoint`, `API key`, and `deployment ID or Name` to the `appsettings.json` file like so:
 
 ```json
 {
   "AzureOpenAI": {
     "Endpoint": "https://<your-resource-name>.openai.azure.com/",
     "ApiKey": "your-api-key",
-    "DeploymentId": "gpt-4o" // or DeploymentName
+    "DeploymentName": "gpt-4o"
   }
 }
 
