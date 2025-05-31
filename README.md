@@ -73,11 +73,10 @@ Before you begin, make sure you have the following installed:
     "ApiKey": "your-api-key",
     "DeploymentName": "gpt-4o"
   }
-}```
-
+}
+```
 
 ---
-
 
 # 🛠️ Setup Instructions
 Run the following commands to get started:
